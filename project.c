@@ -196,13 +196,13 @@ void decipherbykey(char ciphertext[500], int key)
             // Incase of uppercase
             if (isupper(ciphertext[i]))
             {
-                input[i] = (((ciphertext[i] - ('A' - key)) % 26) + 'A');
+                input[i] = (((ciphertext[i] -'A' - key) % 26) + 'A');
             }
 
             //Incase of lowercase
             else if (islower(ciphertext[i]))
             {
-                input[i] = (((ciphertext[i] - ('a' - key)) % 26) + 'a');
+                input[i] = (((ciphertext[i] - 'a' - key) % 26) + 'a');
             }
 
             //Incase of other characters
